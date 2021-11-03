@@ -24,6 +24,16 @@ html {
     background-color: lightcoral;
 }
 
+/* menu */
+ul {
+    list-style: none;
+}
+
+.playlist ul li,
+.playlist-menu ul li {
+    padding: 5px 10px;
+}
+
 /* position */
 .relative {
     position: relative;
@@ -45,7 +55,7 @@ html {
 
 /* TOP ROW */
 .top-row {
-    height: calc(100% - 75px);
+    height: calc(100% - 50px);
 }
 
 .top-row::after {
@@ -56,41 +66,155 @@ html {
 
 /* SIDE HEADER*/
 .side-header {
-    width: 15%;
+    width: 150px;
     height: 100%;
     background-color: limegreen;
 }
 
+/* logo */
 .logo {
-    height: 75px;
-    background-color: blue;
+    height: 50px;
+    line-height: 50px;
+    background-color: black;
 }
 
+.logo img {
+    width: 55%;
+    margin-left: 10%;
+    vertical-align: middle;
+}
+
+/* general */
 .general {
-    height: 150px;
-    background-color: blueviolet
-    ;
+    height: 100px;
+    background-color: black;
 }
 
+.general ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.5em;
+    font-weight: 500;
+    color: var(--light-gray-color);
+}
+
+.general ul li.active {
+    border-left: 2px solid var(--green-color);
+}
+
+.general ul li.active a span {
+    color: white;
+    font-weight: 600;
+}
+
+.general ul li {
+    padding: 5px 10px;
+}
+
+.menu-img {
+    width: 15%;
+    margin-right: 2px;
+}
+
+.general ul li:hover a {
+    color: white;
+}
+
+/* playlist */
 .playlist {
     height: 75px;
-    background-color: lightgrey;
+    background-color: black;
 }
 
+.uppercase {
+    font-size: 0.6em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.playlist h2 {
+    padding: 5px 10px;
+}
+
+.playlist ul li a {
+    text-decoration: none;
+    color: var(--light-gray-color);
+    font-size: .6em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.playlist ul li a .play-symbol {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    color: black;
+    background-color: #d2d2d2;
+    font-size: 2em;
+    padding: 2px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.playlist ul li:hover .play-symbol {
+    background-color: white;
+}
+
+.playlist ul li:hover .play-text {
+    color: white;
+}
+
+/* playlist menu */
 .playlist-menu {
-    height: calc(100% - 375px);
+    height: calc(100% - 275px);
     overflow: auto;
-    background-color: lightsalmon;
+    background-color: black;
 }
 
-.side-footer {
-    height: 75px;
-    background-color: lightsteelblue;
+.playlist-menu ul li a {
+    text-decoration: none;
+    color: var(--light-gray-color);
+    font-size: .6em;
+    font-weight: 500;
 }
+
+.playlist-menu ul li:hover a {
+    color: white;
+}
+
+/* side footer */
+.side-footer {
+    height: 50px;
+    padding-left: 10px;
+    background-color: black;
+}
+
+.side-foot-img {
+    width: 10%;
+    margin-right: 5px;
+}
+
+.side-footer a {
+    text-decoration: none;
+    color: var(--light-gray-color);
+    font-size: .6em;
+    font-weight: 500;
+}
+
+.side-foot-ctoa {
+    display: flex;
+    align-items: center;
+}
+/* .side-foot-text {
+    display: inline-block;
+} */
 
 /* MAIN */
 .main {
-    width: 85%;
+    width: calc(100% - 150px);
     height: 100%;
     background-color: mediumorchid;
 }
@@ -100,21 +224,21 @@ html {
     position: fixed;
     top: 0;
     right: 0;
-    width: 85%;
-    height: 75px;
+    width: calc(100% - 150px);
+    height: 50px;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* main-body */
 .main-body {
-    height: calc(100% - 75px);
-    margin-top: 75px;
+    height: calc(100% - 50px);
+    margin-top: 50px;
     overflow: auto;
 }
 
 /* FOOTER */
 .footer {
-    height: 75px;
+    height: 50px;
     background-color: lightskyblue;
 }
 
