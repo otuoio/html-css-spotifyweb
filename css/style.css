@@ -1,0 +1,120 @@
+:root {
+    --light-gray-color: #DFDFDF;
+    --gray-color: #67696F;
+    --dark-blue-color: #141922;
+    --green-color: #ADFF2E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* COMMON */
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: lightcoral;
+}
+
+/* position */
+.relative {
+    position: relative;
+}
+
+/* float */
+.col {
+    float: left;
+}
+
+/* font colors */
+.font-white {
+    color: white;
+}
+
+.font-gray {
+    color: var(--gray-color);
+}
+
+/* TOP ROW */
+.top-row {
+    height: calc(100% - 75px);
+}
+
+.top-row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* SIDE HEADER*/
+.side-header {
+    width: 15%;
+    height: 100%;
+    background-color: limegreen;
+}
+
+.logo {
+    height: 75px;
+    background-color: blue;
+}
+
+.general {
+    height: 150px;
+    background-color: blueviolet
+    ;
+}
+
+.playlist {
+    height: 75px;
+    background-color: lightgrey;
+}
+
+.playlist-menu {
+    height: calc(100% - 375px);
+    overflow: auto;
+    background-color: lightsalmon;
+}
+
+.side-footer {
+    height: 75px;
+    background-color: lightsteelblue;
+}
+
+/* MAIN */
+.main {
+    width: 85%;
+    height: 100%;
+    background-color: mediumorchid;
+}
+
+/* main-header */
+.main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* main-body */
+.main-body {
+    height: calc(100% - 75px);
+    margin-top: 75px;
+    overflow: auto;
+}
+
+/* FOOTER */
+.footer {
+    height: 75px;
+    background-color: lightskyblue;
+}
+
