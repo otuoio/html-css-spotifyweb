@@ -1,6 +1,6 @@
 :root {
     --light-gray-color: #DFDFDF;
-    --gray-color: #67696F;
+    --gray-color: #282828;
     --dark-blue-color: #141922;
     --green-color: #ADFF2E;
 }
@@ -272,6 +272,7 @@ ul {
     top: 0;
     right: 0;
     width: calc(100% - 150px);
+    min-width: 400px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.3);
     display: flex;
@@ -294,6 +295,7 @@ ul {
 
 /* main-body */
 .main-body {
+    min-width: 400px;
     height: 100%;
     padding-top: 60px;
     overflow: auto;
@@ -346,19 +348,12 @@ h2.row-title {
 
 .main-body .thumb-menu {
     margin-top: 10px;
-    /* display: flex;
-    justify-content: space-between; */
 }
 
 .main-body .thumb-menu li {
-    /* max-width: 200px;
-    min-width: 50px; */
     width: calc((100% / 6) - 15px);
     margin-right: 10px;
     margin-top: 10px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     text-align: center;
 }
 
@@ -391,7 +386,50 @@ h2.row-title {
 /* FOOTER */
 .footer {
     height: 50px;
-    background-color: lightskyblue;
+    min-width: 400px;
+    background-color: var(--gray-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-left,
+.col-cen {
+    width: 10%;
+}
+
+.col-rigth {
+    width: 40%;
+}
+
+.col-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.col-left .song-img {
+   height: 60%;
+   margin-right: 2px;
+   margin-left: 2px;
+}
+
+.col-left .song-info .song-name {
+    font-size: .5em;
+    color: white;
+}
+.col-left .song-info .song-artist {
+    font-size: .4em;
+}
+
+.col-left .song-tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    font-size: .8em;
+}
+.col-left .song-tools i {
+    margin-bottom: 3px;
 }
 
 /* MEDIA QUERY */
@@ -409,6 +447,11 @@ h2.row-title {
 /* <700px */
 @media screen and (max-width: 700px) {
     
+    /* main-header */
+    .main-body .main-menu {
+        flex-wrap: wrap;
+    }
+
     /* main-body */
     
     .main-body .thumb-menu li {
@@ -474,5 +517,10 @@ h2.row-title {
 
     .main-header {
         width: calc(100% - 40px);
+    }
+
+    /* main-header */
+    .main-body .main-menu {
+        flex-wrap: wrap;
     }
 }
