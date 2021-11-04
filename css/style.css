@@ -21,7 +21,6 @@ html {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-color: lightcoral;
 }
 
 /* menu */
@@ -78,9 +77,15 @@ ul {
     background-color: black;
 }
 
-.logo img {
+.logo .logo-big {
     width: 55%;
     margin-left: 10%;
+    vertical-align: middle;
+}
+
+.logo .logo-small {
+    display: none;
+    width: 45%;
     vertical-align: middle;
 }
 
@@ -250,6 +255,7 @@ ul {
 /* MAIN */
 .main {
     width: calc(100% - 150px);
+    /* min-width: 230px; */
     height: 100%;
     background-color: var(--dark-blue-color);
 }
@@ -271,8 +277,8 @@ ul {
     text-decoration: none;
     color: white;
     padding: 7px 25px;
-    font-size: 0.5em;
-    font-weight: 600;
+    font-size: 0.6em;
+    font-weight: 500;
     text-transform: uppercase;
     background-color: transparent;
     border: 1px solid white;
@@ -282,8 +288,8 @@ ul {
 
 /* main-body */
 .main-body {
-    height: calc(100% - 50px);
-    margin-top: 50px;
+    height: 100%;
+    padding-top: 50px;
     overflow: auto;
 }
 
@@ -293,3 +299,63 @@ ul {
     background-color: lightskyblue;
 }
 
+/* MEDIA QUERY */
+
+@media screen and (max-width: 600px) {
+    
+    .side-header {
+        width: 40px;
+    }
+    .logo {
+        text-align: center;
+    }
+    .logo .logo-big {
+        display:none;
+    }
+    .logo .logo-small {
+        display:inline-block;
+    }
+    .general ul li a span {
+        display:none;
+    }
+    .general ul li a img {
+        width: 100%;
+    }
+    .playlist h2 {
+        display:none;
+    }
+    .playlist ul {
+        display:none;
+    }
+    .playlist-menu ul {
+        display:none;
+    }
+    .side-footer .side-foot-ctoa {
+        justify-content: center;
+        padding-left: 0;
+    }
+    .side-footer .side-foot-ctoa .side-foot-text {
+        display:none;
+    }
+    .side-footer .side-foot-ctoa .side-foot-img {
+        width: 20%;
+    }
+    .side-footer hr {
+        visibility: hidden;
+    }
+    .side-footer .profile {
+        justify-content: center;
+        padding-left: 0;
+    }
+    .side-footer .profile .profile-name {
+        display:none;
+    }
+
+    .main {
+        width: calc(100% - 40px);
+    }
+
+    .main-header {
+        width: calc(100% - 40px);
+    }
+}
