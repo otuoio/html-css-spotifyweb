@@ -14,6 +14,7 @@
 html {
     font-size: 100%;
     font-family: 'Montserrat', sans-serif;
+    color: var(--light-gray-color);
 }
 
 /* COMMON */
@@ -31,6 +32,12 @@ ul {
 .playlist ul li,
 .playlist-menu ul li {
     padding: 5px 10px;
+}
+
+/* menu inline */
+.menu-inline li{
+    display: inline-block;
+    list-style: none;
 }
 
 /* position */
@@ -104,7 +111,7 @@ ul {
     color: var(--light-gray-color);
 }
 
-.general ul li.active {
+.general ul li.gen-active {
     border-left: 2px solid var(--green-color);
 }
 
@@ -255,7 +262,6 @@ ul {
 /* MAIN */
 .main {
     width: calc(100% - 150px);
-    /* min-width: 230px; */
     height: 100%;
     background-color: var(--dark-blue-color);
 }
@@ -289,8 +295,37 @@ ul {
 /* main-body */
 .main-body {
     height: 100%;
-    padding-top: 50px;
+    padding-top: 60px;
     overflow: auto;
+}
+
+.main-body .main-menu {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.main-body .main-menu li {
+    margin: 0 10px;
+}
+
+.main-body .main-menu li .main-active {
+    /* border-bottom: 2px solid var(--green-color); */
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--green-color);
+    width: 30%;
+}
+
+.main-body .main-menu li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--light-gray-color);
 }
 
 /* FOOTER */
