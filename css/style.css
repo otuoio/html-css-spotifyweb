@@ -316,13 +316,8 @@ ul {
     margin: 0 10px;
 }
 
-.main-body .main-menu li .main-active {
-    position: relative;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    color: var(--green-color);
-    width: 30%;
+.main-body .main-menu li.main-active {
+    border-bottom: 1px solid var(--green-color);
 }
 
 .main-body .main-menu li a {
